@@ -1,17 +1,14 @@
 "use client"
-
 import React from "react";
 import {cn} from "@/lib/utils";
 import {useTheme} from "next-themes";
-
 type SpotlightProps = {
     className?: string;
     fill?: string;
 };
 
-export const Spotlight = ({ className }: SpotlightProps) => {
+export const Spotlight =  ({ className }: SpotlightProps) => {
     const fill = useTheme().theme === 'dark' ? 'white' : 'black'
-    console.log(fill)
     return (
         <svg
             className={cn(
