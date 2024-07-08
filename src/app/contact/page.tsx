@@ -16,7 +16,7 @@ export default function Contact() {
                                     Get in Touch
                                 </h1>
                                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                                    Have a question or want to work together? Fill out the form and we'll get back to
+                                    Have a question or want to work together? Fill out the form and we&apos;ll get back to
                                     you as soon as
                                     possible.
                                 </p>

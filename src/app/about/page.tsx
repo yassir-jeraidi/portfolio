@@ -23,10 +23,8 @@ export default function About() {
                         <div
                             className="mt-4 font-normal text-base gap-2 text-neutral-500 flex justify-center items-center flex-col">
                             <p>
-                                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                Hello! I'm Jeraidi Yassir, a 20-year-old web development enthusiast with a
-                                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                Bachelor's degree in Information Technology. My passion for web development
+                                Hello! I&apos;m Jeraidi Yassir, a 20-year-old web development enthusiast with a
+                                Bachelor&apos;s degree in Information Technology. My passion for web development
                                 p drives me to continuously improve my skills and stay updated with the latest
                                 technologies.
                             </p>
