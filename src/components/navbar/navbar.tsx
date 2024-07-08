@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className='fixed z-50  border md:bg-transparent md:dark:bg-transparent backdrop-blur-lg bg-white dark:bg-black md:top-10 bottom-2 right-2 left-2
         w-auto h-16 md:w-20 md:h-auto md:bottom-10 md:-left-3
         md:rounded-l-2xl rounded-2xl'>
-            <div className='relative h-full w-full'>
+            <div className='relative h-full md:mx-1 w-full'>
                 <div className="flex gap-3  h-full md:flex-col items-center justify-center"
                 >
                     {

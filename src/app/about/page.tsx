@@ -1,4 +1,3 @@
-"use client"
 import aboutMe from '@/assets/about-me.png'
 import Image from "next/image";
 import {
@@ -12,9 +11,7 @@ import {
 import {TracingBeam} from "@/components/ui/tracing-beam";
 import React from "react";
 
-export default function Home() {
-    const userAgent = navigator.userAgent;
-    const clientIsMobile = /Mobi|Android|ios/i.test(userAgent);
+export default function About() {
     return (
         <TracingBeam className="md:px-8">
             <div className="md:flex md:py-20 justify-center flex-col items-center gap-4">
@@ -26,7 +23,9 @@ export default function Home() {
                         <div
                             className="mt-4 font-normal text-base gap-2 text-neutral-500 flex justify-center items-center flex-col">
                             <p>
+                                {/* eslint-disable-next-line react/no-unescaped-entities */}
                                 Hello! I'm Jeraidi Yassir, a 20-year-old web development enthusiast with a
+                                {/* eslint-disable-next-line react/no-unescaped-entities */}
                                 Bachelor's degree in Information Technology. My passion for web development
                                 p drives me to continuously improve my skills and stay updated with the latest
                                 technologies.
