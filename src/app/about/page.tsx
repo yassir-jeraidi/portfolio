@@ -59,13 +59,26 @@ export default function About() {
                     <span>Education</span>
                 </h1>
                 <Timeline positions={'left'} className='w-full'>
+                    <TimelineItem status="done">
+                        <TimelineHeading>
+                            Master&apos;s degree in Distributed Systems and Artificial Intelligence
+                        </TimelineHeading>
+                        <TimelineDot status="current"/>
+                        <TimelineLine/>
+                        <TimelineContent>
+                            <p className='text-sm my-2 text-neutral-500'>
+                                September 2024 - ...
+                            </p>
+                            ENSET Mohammedia
+                        </TimelineContent>
+                    </TimelineItem>
                     <TimelineItem>
                         <TimelineHeading>
                             Professional Bachelor in Software Engineering and Advanced Administration of Computer
                             Systems and Networks
                         </TimelineHeading>
 
-                        <TimelineDot/>
+                        <TimelineDot status="done" />
                         <TimelineLine/>
                         <TimelineContent>
                             <p className='text-sm my-2 text-neutral-500'>
@@ -74,11 +87,11 @@ export default function About() {
                             EST Casablanca
                         </TimelineContent>
                     </TimelineItem>
-                    <TimelineItem status="done">
+                    <TimelineItem>
                         <TimelineHeading>Specialized Technician in Web Programming And
                             Technologies</TimelineHeading>
 
-                        <TimelineDot status="current"/>
+                        <TimelineDot status="done"/>
                         <TimelineLine/>
                         <TimelineContent>
                             <p className='text-sm my-2 text-neutral-500'>
@@ -93,7 +106,7 @@ export default function About() {
                             Baccalaureate In Life and Earth Sciences
                         </TimelineHeading>
 
-                        <TimelineDot/>
+                        <TimelineDot status="done" />
                         <TimelineContent>
                             <p className='text-sm my-2 text-neutral-500'>
                                 June 2021.
