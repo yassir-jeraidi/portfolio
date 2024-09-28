@@ -28,7 +28,6 @@ export default function Contact(): JSX.Element {
                 },
                 body: JSON.stringify(data)
             });
-            console.log(response)
             toast.success('Thank you for getting in touch! We appreciate you contacting us', {
                 description: new Date().toDateString()
             });
@@ -55,9 +54,7 @@ export default function Contact(): JSX.Element {
                                     </h1>
                                     <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
                                         Have a question or want to work together? Fill out the form and we&apos;ll get
-                                        back to
-                                        you as soon as
-                                        possible.
+                                        back to you as soon as possible.
                                     </p>
                                 </div>
                                 <div className="w-full max-w-md mx-auto">

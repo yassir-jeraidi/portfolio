@@ -2,9 +2,11 @@ import {Button} from "@/components/ui/button";
 import {FlipWords} from "@/components/ui/flip-words";
 import Image from "next/image";
 import me from '@/assets/me.png'
-
+import {headers} from "next/headers";
 
 export default function Home() {
+    const userAgent = headers().get('user-agent');
+    console.log(userAgent)
     const words = ["'m Yassir", "'m developer", "❤️Javascript", "❤️MERN"];
     return (
         <div className="md:flex md:ps-40 h-screen justify-center items-center gap-4">

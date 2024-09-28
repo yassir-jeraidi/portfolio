@@ -6,6 +6,7 @@ export default function Projects() {
     const [hours, setHours] = useState(0)
     const [minutes, setMinutes] = useState(0)
     const [seconds, setSeconds] = useState(0)
+
     useEffect(() => {
         const countdownDate = new Date("2024-11-01").getTime()
         const interval = setInterval(() => {

@@ -1,17 +1,18 @@
+
 'use client'
-import { cn } from "@/lib/utils";
+import { cn} from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
-import { skills } from "@/data/skills";
-import { useTheme } from "next-themes";
+import {skills} from "@/data/skills";
+import {useTheme} from "next-themes";
 
 export const HoverEffect = ({
                                 className,
                             }: {
     className?: string;
 }) => {
-    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-    const { theme } = useTheme();
+    let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+    const {theme} = useTheme();
 
     const handleClick = (idx: number) => {
         if (hoveredIndex === idx) {
@@ -24,7 +25,7 @@ export const HoverEffect = ({
     return (
         <div
             className={cn(
-                "grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6",
+                "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-4 lg:grid-cols-6 ",
                 className
             )}
         >
@@ -41,14 +42,14 @@ export const HoverEffect = ({
                             <motion.span
                                 className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
                                 layoutId="hoverBackground"
-                                initial={{ opacity: 0 }}
+                                initial={{opacity: 0}}
                                 animate={{
                                     opacity: 1,
-                                    transition: { duration: 0.15 },
+                                    transition: {duration: 0.15},
                                 }}
                                 exit={{
                                     opacity: 0,
-                                    transition: { duration: 0.15, delay: 0.2 },
+                                    transition: {duration: 0.15, delay: 0.2},
                                 }}
                             />
                         )}
@@ -75,15 +76,16 @@ export const Card = ({
             className={cn(
                 "rounded-2xl h-[150px] w-[150px] flex flex-col justify-center items-center " +
                 " overflow-hidden  border text-slate-500 dark:bg-slate-800/[0.1]  border-black" +
-                " dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+                "  dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
                 className
             )}
         >
-            {children}
+            {
+                children
+            }
         </div>
     );
 };
-
 export const CardTitle = ({
                               className,
                               children,
