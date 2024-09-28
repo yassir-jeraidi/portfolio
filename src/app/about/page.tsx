@@ -125,17 +125,20 @@ export default function About() {
                         <TimelineHeading>
                             ATOS | Application developer
                         </TimelineHeading>
-                        <TimelineDot/>
+                        <TimelineDot status="done" />
                         <TimelineLine/>
                         <TimelineContent>
                             <p className='text-sm my-2 text-neutral-500'>
-                                April 2024 - July 2024.
+                                April 2024 - August 2024.
                             </p>
 
                             <ul className='text-sm  list-disc ps-6'>
                                 <li>
                                     Development of a desktop application for the calculation of overtime specific to
                                     ATOS .
+                                </li>
+                                <li>
+                                    Development of a web application for administrative management
                                 </li>
                                 <li>
                                     Development of a blog management web application.
@@ -147,8 +150,7 @@ export default function About() {
                         <TimelineHeading>
                             CDC Digital and AI | Web developer
                         </TimelineHeading>
-
-                        <TimelineDot status="current"/>
+                        <TimelineDot status="done"/>
                         <TimelineContent>
                             <p className='text-sm my-2 text-neutral-500'>
                                 Mars 2023 - May 2023.
