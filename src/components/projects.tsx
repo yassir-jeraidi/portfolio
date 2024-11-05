@@ -8,7 +8,7 @@ export default function Projects() {
     const [seconds, setSeconds] = useState(0)
 
     useEffect(() => {
-        const countdownDate = new Date("2024-11-01").getTime()
+        const countdownDate = new Date("2025-01-01").getTime()
         const interval = setInterval(() => {
             const now = new Date().getTime()
             const distance = countdownDate - now
