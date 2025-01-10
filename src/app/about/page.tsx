@@ -23,29 +23,26 @@ export default function About() {
                         <div
                             className="mt-4 font-normal text-base gap-2 text-neutral-500 flex justify-center items-center flex-col">
                             <p>
-                                Hello! I&apos;m Jeraidi Yassir, a 20-year-old web development enthusiast with a
-                                Bachelor&apos;s degree in Information Technology. My passion for web development
-                                p drives me to continuously improve my skills and stay updated with the latest
-                                technologies.
+                                Hello! I&apos;m Jeraidi Yassir, a 21-year-old web development enthusiast with a
+                                Bachelor’s degree in Information Technology. My passion lies in crafting innovative web
+                                solutions while continuously honing my skills to stay at the forefront of technology.
                             </p>
 
                             <p>
-                                I specialize in both front-end and back-end development,
-                                using HTML, CSS, JavaScript, React.js, and Next.js to create dynamic
-                                user interfaces, and Node.js with Express.js, PHP with Laravel, and
-                                Java with Spring Boot for robust back-end solutions. I also have
-                                p experience with Electron.js for desktop apps and am proficient
-                                with version control using Git, GitHub, and GitLab.
+                                I specialize in full-stack development, seamlessly bridging the gap between front-end
+                                and back-end. On the front-end, I work with HTML, CSS, JavaScript, React.js, and Next.js
+                                to design engaging and dynamic user interfaces. For back-end solutions, I leverage
+                                Node.js with Express.js, PHP with Laravel, and Java with Spring Boot to build robust,
+                                scalable applications. I also have experience developing desktop applications using
+                                Electron.js and am proficient in version control with Git, GitHub, and GitLab.
                             </p>
 
                             <p>
-                                My typical development environment includes VSCode and JetBrains IDEs. I am positive,
-                                open-minded, and always seeking new challenges and opportunities for growth. My
-                                experience
-                                in private IT companies and as a freelancer has given me a well-rounded perspective on
-                                project environments and client needs. My journey in web development is driven by a
-                                p desire
-                                for continuous self-improvement and creating impactful solutions.
+                                My development environment is powered by tools like VSCode and JetBrains IDEs, ensuring
+                                efficient workflows and high-quality results. Having worked in private IT companies and
+                                as a freelancer, I’ve gained valuable insights into diverse project environments and
+                                client requirements. I’m a positive and open-minded individual, always eager to embrace
+                                new challenges, refine my expertise, and deliver impactful solutions.
                             </p>
                         </div>
                     </div>
@@ -78,7 +75,7 @@ export default function About() {
                             Systems and Networks
                         </TimelineHeading>
 
-                        <TimelineDot status="done" />
+                        <TimelineDot status="done"/>
                         <TimelineLine/>
                         <TimelineContent>
                             <p className='text-sm my-2 text-neutral-500'>
@@ -106,7 +103,7 @@ export default function About() {
                             Baccalaureate In Life and Earth Sciences
                         </TimelineHeading>
 
-                        <TimelineDot status="done" />
+                        <TimelineDot status="done"/>
                         <TimelineContent>
                             <p className='text-sm my-2 text-neutral-500'>
                                 June 2021.
@@ -125,7 +122,7 @@ export default function About() {
                         <TimelineHeading>
                             ATOS | Application developer
                         </TimelineHeading>
-                        <TimelineDot status="done" />
+                        <TimelineDot status="done"/>
                         <TimelineLine/>
                         <TimelineContent>
                             <p className='text-sm my-2 text-neutral-500'>
