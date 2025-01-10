@@ -1,8 +1,8 @@
 'use client'
 
 import {cn} from "@/lib/utils";
-import {AnimatePresence, motion} from "framer-motion";
-import React, {useState} from "react";
+import {AnimatePresence, motion, useInView} from "framer-motion";
+import React, {useState, useRef} from "react";
 import {
     programmingLanguages,
     frontend,
@@ -14,6 +14,15 @@ import {
     software
 } from "@/data/skills";
 import {useTheme} from "next-themes";
+
+const cardVariants = {
+    hiddenLeft: { opacity: 0, x: -100 },
+    hiddenRight: { opacity: 0, x: 100 },
+    hiddenTop: { opacity: 0, y: -100 },
+    hiddenBottom: { opacity: 0, y: 100 },
+    visible: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: 0 },
+};
 
 export const HoverEffect = ({
                                 className,
@@ -32,7 +41,12 @@ export const HoverEffect = ({
     };
 
     return (
-        <div>
+        <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
+        >
             <div className="programming-languages">
                 <h2 className="text-2xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
                     Programming Languages :
@@ -137,7 +151,7 @@ export const HoverEffect = ({
                     <AnimatedCard skills={software(theme)} handleClick={handleClick}/>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
@@ -152,40 +166,50 @@ const AnimatedCard = (
     }
 ) => {
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+            const ref = useRef(null);
+            const inView = useInView(ref, { once: true });
     return (
-        skills.map((item, idx) => (
-            <div
-                key={idx}
-                className="relative group p-2 h-full w-full cursor-pointer"
-                onMouseEnter={() => setHoveredIndex(idx)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                onClick={() => handleClick(idx)}  // Handle clicks for mobile
-            >
-                <AnimatePresence>
-                    {hoveredIndex === idx && (
-                        <motion.span
-                            className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
-                            layoutId="hoverBackground"
-                            initial={{opacity: 0}}
-                            animate={{
-                                opacity: 1,
-                                transition: {duration: 0.15},
-                            }}
-                            exit={{
-                                opacity: 0,
-                                transition: {duration: 0.15, delay: 0.2},
-                            }}
-                        />
-                    )}
-                </AnimatePresence>
-                <Card>
-                    <div className="mb-5">{item.icon}</div>
-                    <CardTitle>{item.title}</CardTitle>
-                </Card>
-            </div>
-        ))
-    )
+        skills.map((item, idx) => {
 
+            return (
+                <motion.div
+                    key={idx}
+                    className="relative group p-2 h-full w-full cursor-pointer"
+                    onMouseEnter={() => setHoveredIndex(idx)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                    onClick={() => handleClick(idx)}  // Handle clicks for mobile
+                    initial={idx % 4 === 0 ? "hiddenLeft" : idx % 4 === 1 ? "hiddenRight" : idx % 4 === 2 ? "hiddenTop" : "hiddenBottom"}
+                    animate={inView ? "visible" : ""}
+                    exit="exit"
+                    variants={cardVariants}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    ref={ref}
+                >
+                    <AnimatePresence>
+                        {hoveredIndex === idx && (
+                            <motion.span
+                                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
+                                layoutId="hoverBackground"
+                                initial={{opacity: 0}}
+                                animate={{
+                                    opacity: 1,
+                                    transition: {duration: 0.15},
+                                }}
+                                exit={{
+                                    opacity: 0,
+                                    transition: {duration: 0.15, delay: 0.2},
+                                }}
+                            />
+                        )}
+                    </AnimatePresence>
+                    <Card>
+                        <div className="mb-5">{item.icon}</div>
+                        <CardTitle>{item.title}</CardTitle>
+                    </Card>
+                </motion.div>
+            );
+        })
+    );
 }
 
 export const Card = ({
