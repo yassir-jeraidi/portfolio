@@ -4,7 +4,7 @@ import {Button} from "@/components/ui/button"
 import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
-import {FormEvent, useRef} from "react";
+import { FormEvent, useRef, type JSX } from "react";
 import {toast} from "sonner";
 
 export default function Contact(): JSX.Element {

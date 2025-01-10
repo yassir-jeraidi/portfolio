@@ -4,8 +4,8 @@ import Image from "next/image";
 import me from '@/assets/me.png'
 import {headers} from "next/headers";
 
-export default function Home() {
-    const userAgent = headers().get('user-agent');
+export default async function Home() {
+    const userAgent = (await headers()).get('user-agent');
     console.log(userAgent)
     const words = ["'m Yassir", "'m developer", "❤️Javascript", "❤️MERN"];
     return (
@@ -37,3 +37,4 @@ export default function Home() {
         </div>
     );
 }
+
