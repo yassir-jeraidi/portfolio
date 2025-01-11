@@ -16,12 +16,12 @@ import {
 import {useTheme} from "next-themes";
 
 const cardVariants = {
-    hiddenLeft: { opacity: 0, x: -100 },
-    hiddenRight: { opacity: 0, x: 100 },
-    hiddenTop: { opacity: 0, y: -100 },
-    hiddenBottom: { opacity: 0, y: 100 },
-    visible: { opacity: 1, x: 0, y: 0 },
-    exit: { opacity: 0, x: 0, y: 0 },
+    hiddenLeft: {opacity: 0, x: -100},
+    hiddenRight: {opacity: 0, x: 100},
+    hiddenTop: {opacity: 0, y: -100},
+    hiddenBottom: {opacity: 0, y: 100},
+    visible: {opacity: 1, x: 0, y: 0},
+    exit: {opacity: 0, x: 0, y: 0},
 };
 
 export const HoverEffect = ({
@@ -42,10 +42,10 @@ export const HoverEffect = ({
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.5 }}
+            initial={{opacity: 0, y: 50}}
+            animate={{opacity: 1, y: 0}}
+            exit={{opacity: 0, y: 50}}
+            transition={{duration: 0.5}}
         >
             <div className="programming-languages">
                 <h2 className="text-2xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
@@ -166,8 +166,8 @@ const AnimatedCard = (
     }
 ) => {
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-            const ref = useRef(null);
-            const inView = useInView(ref, { once: true });
+    const ref = useRef(null);
+    const inView = useInView(ref, {once: true});
     return (
         skills.map((item, idx) => {
 
@@ -182,7 +182,7 @@ const AnimatedCard = (
                     animate={inView ? "visible" : ""}
                     exit="exit"
                     variants={cardVariants}
-                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    transition={{duration: 0.5, delay: idx * 0.1}}
                     ref={ref}
                 >
                     <AnimatePresence>

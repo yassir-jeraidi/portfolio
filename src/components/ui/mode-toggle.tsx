@@ -18,6 +18,7 @@ const ModeToggle = () => {
         <Button
             variant='outline'
             size='icon'
+            className="dark:bg-neutral-900 bg-white"
             onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
         >
             {
