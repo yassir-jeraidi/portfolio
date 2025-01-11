@@ -1,6 +1,7 @@
 import {HoverEffect} from "@/components/ui/card-hover-effect";
+import {JSX} from "react";
 
-export default function Home() {
+export default function SkillsPage() : JSX.Element {
     return (
 
         <div className="md:flex md:ps-44 justify-start flex-col items-start gap-4 pb-12 px-1.5">
