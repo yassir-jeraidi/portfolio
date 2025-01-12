@@ -1,14 +1,17 @@
 "use client"
-import React from "react";
+import React, {useEffect} from "react";
 import {cn} from "@/lib/utils";
 import {useTheme} from "next-themes";
+
 type SpotlightProps = {
     className?: string;
     fill?: string;
 };
 
-export const Spotlight =  ({ className }: SpotlightProps) => {
-    const fill = useTheme().theme === 'dark' ? 'white' : 'black'
+export const Spotlight = ({className}: SpotlightProps) => {
+    const {theme} = useTheme()
+    const fill = theme === 'dark' ? '#fff' : '#000'
+
     return (
         <svg
             className={cn(
@@ -26,7 +29,7 @@ export const Spotlight =  ({ className }: SpotlightProps) => {
                     rx="1924.71"
                     ry="273.501"
                     transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
-                    fill={fill || "white"}
+                    fill={fill}
                     fillOpacity="0.21"
                 ></ellipse>
             </g>
