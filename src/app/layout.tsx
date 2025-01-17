@@ -31,7 +31,7 @@ export default function RootLayout({
                 disableTransitionOnChange
             >
                 <div
-                    className=" min-h-screen pb-20 md:pb-0 w-full px-6 md:px-36 rounded-md  dark:bg-black/[0.96]  bg-grid-sky-600/[0.05] relative overflow-hidden ">
+                    className=" min-h-screen pb-20 md:pb-0 w-full px-6 md:px-36 rounded-md  dark:bg-black/[0.95]  bg-grid-sky-600/[0.05] relative overflow-hidden ">
                     <Spotlight
                         className="-top-40 left-0 md:left-60 md:-top-20"
 
