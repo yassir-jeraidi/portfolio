@@ -1,21 +1,32 @@
-export default function Projects() {
+import {ProjectCard} from "@/components/project-card";
 
+const project1 = {
+    title: "Modern E-commerce Platform",
+    description: "A full-featured e-commerce platform built with React and Node.js",
+    longDescription: "A sophisticated e-commerce platform that offers a seamless shopping experience with features like real-time inventory management, secure payment processing, and an intuitive admin dashboard. Built with performance and scalability in mind, it utilizes modern web technologies and best practices.",
+    technologies: ["React", "Node.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+    images: [
+        "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=450&fit=crop",
+        "https://images.unsplash.com/photo-1565084888279-aca607ecce0c?w=800&h=450&fit=crop",
+        "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&h=450&fit=crop",
+    ],
+    liveUrl: "https://example.com",
+    isLiveUrlActive: false,
+    githubUrl: "https://github.com/example/project",
+    isGithubUrlActive: false,
+};
+
+const projects = [project1]
+
+export default function Projects() {
     return (
-        /*<div className="md:flex md:ps-44 justify-start flex-col items-start gap-4 px-4">
-            <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b pt-20 from-neutral-300 to-neutral-500 bg-opacity-50">
-                Projects
-            </h1>
-        </div>*/
-        <div
-            className="flex min-h-[100dvh] flex-col items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-md text-center">
-                <h1 className="text-4xl mx-2 font-bold bg-clip-text text-transparent bg-gradient-to-b  from-neutral-300 to-neutral-500 bg-opacity-50">
-                    Coming Soon
-                </h1>
-                <p className="mt-4 text-muted-foreground">
-                    I&apos;m working hard to bring you something amazing. Stay tuned for updates!
-                </p>
-            </div>
+        <div className="w-full h-screen flex justify-center items-center ">
+            {
+                projects.map((project , index) => (
+                    <ProjectCard {...project} key={index}/>
+                ))
+            }
         </div>
+
     );
 }
