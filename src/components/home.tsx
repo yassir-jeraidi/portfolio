@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FlipWords } from "@/components/ui/flip-words";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import me from "@/assets/me.png";
+import me from "@/assets/me/me.png";
 
 export default function Home() : JSX.Element {
     const words: string[] = ["'m Yassir", "'m developer", "❤️Javascript", "❤️MERN"];

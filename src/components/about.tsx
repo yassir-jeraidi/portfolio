@@ -1,5 +1,5 @@
 "use client"
-import aboutMe from '@/assets/about-me.png'
+import aboutMe from '@/assets/me/about-me.png'
 import Image from "next/image";
 import {
     Timeline,

@@ -1,65 +1,65 @@
 import Image from "next/image";
 
 // Icons - Programming Languages
-import html_icon from "@/assets/html5.svg";
-import css_icon from "@/assets/css.svg";
-import js_icon from "@/assets/javascript.svg";
-import php_icon_dark from "@/assets/Php_dark.svg";
-import php_icon_light from "@/assets/Php_light.svg";
-import java_icon from "@/assets/java.svg";
-import ts_icon from "@/assets/typescript.svg";
-import python_icon from "@/assets/python.svg";
+import html_icon from "@/assets/skills-icons/html5.svg";
+import css_icon from "@/assets/skills-icons/css.svg";
+import js_icon from "@/assets/skills-icons/javascript.svg";
+import php_icon_dark from "@/assets/skills-icons/Php_dark.svg";
+import php_icon_light from "@/assets/skills-icons/Php_light.svg";
+import java_icon from "@/assets/skills-icons/java.svg";
+import ts_icon from "@/assets/skills-icons/typescript.svg";
+import python_icon from "@/assets/skills-icons/python.svg";
 
 // Icons - Frontend Frameworks
-import react_icon from "@/assets/react.svg";
-import nextjs_icon from "@/assets/nextjs_icon_dark.svg";
-import angular_icon from "@/assets/angular.svg";
-import vue_icon from "@/assets/vue.svg";
-import tailwindcss_icon from "@/assets/tailwindcss.svg";
-import bootstrap_icon from "@/assets/bootstrap.svg";
-import headless_ui_icon from "@/assets/headlessui.svg";
-import material_ui_icon from "@/assets/materialui.svg";
-import shadcn_ui_icon_dark from "@/assets/ui_dark.svg";
-import shadcn_ui_icon_light from "@/assets/ui_light.svg";
-import react_query_icon from "@/assets/reactquery.svg";
-import react_router_icon from "@/assets/reactrouter.svg";
-import redux_icon from "@/assets/redux.svg";
+import react_icon from "@/assets/skills-icons/react.svg";
+import nextjs_icon from "@/assets/skills-icons/nextjs_icon_dark.svg";
+import angular_icon from "@/assets/skills-icons/angular.svg";
+import vue_icon from "@/assets/skills-icons/vue.svg";
+import tailwindcss_icon from "@/assets/skills-icons/tailwindcss.svg";
+import bootstrap_icon from "@/assets/skills-icons/bootstrap.svg";
+import headless_ui_icon from "@/assets/skills-icons/headlessui.svg";
+import material_ui_icon from "@/assets/skills-icons/materialui.svg";
+import shadcn_ui_icon_dark from "@/assets/skills-icons/ui_dark.svg";
+import shadcn_ui_icon_light from "@/assets/skills-icons/ui_light.svg";
+import react_query_icon from "@/assets/skills-icons/reactquery.svg";
+import react_router_icon from "@/assets/skills-icons/reactrouter.svg";
+import redux_icon from "@/assets/skills-icons/redux.svg";
 
 // Icons - Backend Frameworks
-import nodejs_icon from "@/assets/nodejs.svg";
-import expressjs_icon_dark from "@/assets/Express.js_dark.svg";
-import expressjs_icon_light from "@/assets/Express.js_light.svg";
-import jwt_icon from "@/assets/jwt.svg";
-import laravel_icon from "@/assets/laravel.svg";
-import spring_icon from "@/assets/spring.svg";
+import nodejs_icon from "@/assets/skills-icons/nodejs.svg";
+import expressjs_icon_dark from "@/assets/skills-icons/Express.js_dark.svg";
+import expressjs_icon_light from "@/assets/skills-icons/Express.js_light.svg";
+import jwt_icon from "@/assets/skills-icons/jwt.svg";
+import laravel_icon from "@/assets/skills-icons/laravel.svg";
+import spring_icon from "@/assets/skills-icons/spring.svg";
 
 // Icons - Databases
-import mongodb_icon from "@/assets/mongodb.svg";
-import mysql_icon from "@/assets/mysql.svg";
-import sqlite_icon from "@/assets/sqlite.svg";
-import supabase_icon from "@/assets/supabase.svg";
-import firebase_icon from "@/assets/firebase.svg";
+import mongodb_icon from "@/assets/skills-icons/mongodb.svg";
+import mysql_icon from "@/assets/skills-icons/mysql.svg";
+import sqlite_icon from "@/assets/skills-icons/sqlite.svg";
+import supabase_icon from "@/assets/skills-icons/supabase.svg";
+import firebase_icon from "@/assets/skills-icons/firebase.svg";
 
 // Icons - DevOps Tools
-import docker_icon from "@/assets/docker.svg";
-import vercel_light_icon from "@/assets/Vercel_light.svg";
-import vercel_dark_icon from "@/assets/Vercel_dark.svg";
+import docker_icon from "@/assets/skills-icons/docker.svg";
+import vercel_light_icon from "@/assets/skills-icons/Vercel_light.svg";
+import vercel_dark_icon from "@/assets/skills-icons/Vercel_dark.svg";
 
 
 // Icons - Software Tools
-import git_icon from "@/assets/git.svg";
-import jetbrains_icon from "@/assets/jetbrainsSolid.svg";
-import vscode_icon from "@/assets/vscode.svg";
-import vite_icon from "@/assets/vitejs.svg";
-import warp_icon from "@/assets/warp.svg";
-import electron_icon from "@/assets/electron.svg";
+import git_icon from "@/assets/skills-icons/git.svg";
+import jetbrains_icon from "@/assets/skills-icons/jetbrainsSolid.svg";
+import vscode_icon from "@/assets/skills-icons/vscode.svg";
+import vite_icon from "@/assets/skills-icons/vitejs.svg";
+import warp_icon from "@/assets/skills-icons/warp.svg";
+import electron_icon from "@/assets/skills-icons/electron.svg";
 
 // Icons - Design Tools
-import figma_icon from "@/assets/figma.svg";
-import canva_icon from "@/assets/canva.svg";
+import figma_icon from "@/assets/skills-icons/figma.svg";
+import canva_icon from "@/assets/skills-icons/canva.svg";
 
 // Icons - Charting Libraries
-import chartjs_icon from "@/assets/chartjs.svg";
+import chartjs_icon from "@/assets/skills-icons/chartjs.svg";
 
 // Programming Languages
 export const programmingLanguages = (theme: string | undefined) => [
