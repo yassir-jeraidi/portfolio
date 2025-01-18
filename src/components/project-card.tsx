@@ -155,7 +155,7 @@ export const ProjectCard = memo(function ProjectCard({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <CardContainer className="inter-var mb-4 sm:mb-10">
+                <CardContainer className="inter-var mb-4 sm:mb-10 ">
                     <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-4 sm:p-6 border">
                         {/* Card content */}
                         <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
