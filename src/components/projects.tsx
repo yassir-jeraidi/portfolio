@@ -20,6 +20,24 @@ import atos_gda_export_base_dark from "@/assets/projects/atos-gestion-doc/atos-g
 
 import {ProjectCard} from "@/components/project-card";
 
+// school management project images
+import sms_about_dark from "@/assets/projects/school-management-system/sms-about-dark.png";
+import sms_about_light from "@/assets/projects/school-management-system/sms-about-light.png";
+import sms_contact_dark from "@/assets/projects/school-management-system/sms-contact-dark.png";
+import sms_contact_light from "@/assets/projects/school-management-system/sms-contact-light.png";
+import sms_enjoy_moment_dark from "@/assets/projects/school-management-system/sms-enjoy-moment-dark.png";
+import sms_enjoy_moment_light from "@/assets/projects/school-management-system/sms-enjoy-moment-light.png";
+import sms_footer_dark from "@/assets/projects/school-management-system/sms-footer-dark.png";
+import sms_footer_light from "@/assets/projects/school-management-system/sms-footer-light.png";
+import sms_home_dark from "@/assets/projects/school-management-system/sms-home-dark.png";
+import sms_home_light from "@/assets/projects/school-management-system/sms-home-light.png";
+import sms_login_dark from "@/assets/projects/school-management-system/sms-login-dark.png";
+import sms_login_light from "@/assets/projects/school-management-system/sms-login-light.png";
+import sms_more_info_dark from "@/assets/projects/school-management-system/sms-more-inf-dark.png";
+import sms_more_info_light from "@/assets/projects/school-management-system/sms-more-info-light.png";
+import sms_services_dark from "@/assets/projects/school-management-system/sms-services-dark.png";
+import sms_services_light from "@/assets/projects/school-management-system/sms-services-light.png";
+
 const projects = [
     {
         title: "Calculation of overtime hours",
@@ -56,13 +74,39 @@ const projects = [
         ],
         liveUrl: "https://example.com",
         githubUrl: "https://github.com/example/project",
+    },
+    {
+        title: "School management system",
+        description: "A full-featured school management system built with Laravel, React.js, and MySQL.",
+        longDescription: "I have developed a fully decoupled school management application from A to Z, using Laravel for the backend and React for the frontend. This application offers a smooth user experience and comprehensive management of school activities, including student, teacher, course, timetable management, and much more.",
+        technologies: ["Laravel", "React.js", "MySQL", "Tailwind CSS", "Git", "Github" , "JWT"],
+        images: [
+            sms_home_light.src,
+            sms_home_dark.src,
+            sms_about_light.src,
+            sms_about_dark.src,
+            sms_more_info_light.src,
+            sms_more_info_dark.src,
+            sms_services_light.src,
+            sms_services_dark.src,
+            sms_contact_light.src,
+            sms_contact_dark.src,
+            sms_enjoy_moment_light.src,
+            sms_enjoy_moment_dark.src,
+            sms_footer_light.src,
+            sms_footer_dark.src,
+            sms_login_light.src,
+            sms_login_dark.src,
+        ],
+        liveUrl: "https://example.com",
+        githubUrl: "https://github.com/example/project",
     }
 ]
 
 
 export default function Projects() {
     return (
-        <div className="w-full min-h-screen flex flex-wrap md:gap-10 justify-center items-center ">
+        <div className="w-full min-h-screen my-10 flex flex-wrap md:gap-5 justify-center items-center ">
             {
                 projects.map((project, index) => (
                     <ProjectCard {...project} key={index}/>
