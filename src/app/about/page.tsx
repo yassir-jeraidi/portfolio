@@ -6,3 +6,5 @@ export default function AboutPage(): JSX.Element {
        <About />
     );
 }
+
+
