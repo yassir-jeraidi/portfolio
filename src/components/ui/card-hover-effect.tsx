@@ -48,12 +48,12 @@ export const HoverEffect = ({
             transition={{duration: 0.5}}
         >
             <div className="programming-languages">
-                <h2 className="text-2xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
+                <h2 className="text-3xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
                     Programming Languages :
                 </h2>
                 <div
                     className={cn(
-                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-4 lg:grid-cols-8 ",
+                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-5  ",
                         className
                     )}
                 >
@@ -61,12 +61,12 @@ export const HoverEffect = ({
                 </div>
             </div>
             <div className="frontend">
-                <h2 className="text-2xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
+                <h2 className="text-3xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
                     Frontend :
                 </h2>
                 <div
                     className={cn(
-                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-4 lg:grid-cols-8 ",
+                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-5  ",
                         className
                     )}
                 >
@@ -74,12 +74,12 @@ export const HoverEffect = ({
                 </div>
             </div>
             <div className="design">
-                <h2 className="text-2xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
+                <h2 className="text-3xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
                     Design :
                 </h2>
                 <div
                     className={cn(
-                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-4 lg:grid-cols-8 ",
+                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-5  ",
                         className
                     )}
                 >
@@ -87,12 +87,12 @@ export const HoverEffect = ({
                 </div>
             </div>
             <div className="backend">
-                <h2 className="text-2xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
+                <h2 className="text-3xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
                     Backend :
                 </h2>
                 <div
                     className={cn(
-                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-4 lg:grid-cols-8 ",
+                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-5  ",
                         className
                     )}
                 >
@@ -100,12 +100,12 @@ export const HoverEffect = ({
                 </div>
             </div>
             <div className="databases">
-                <h2 className="text-2xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
+                <h2 className="text-3xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
                     Databases :
                 </h2>
                 <div
                     className={cn(
-                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-4 lg:grid-cols-8 ",
+                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-5  ",
                         className
                     )}
                 >
@@ -113,12 +113,12 @@ export const HoverEffect = ({
                 </div>
             </div>
             <div className="devops">
-                <h2 className="text-2xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
+                <h2 className="text-3xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
                     DevOps :
                 </h2>
                 <div
                     className={cn(
-                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-4 lg:grid-cols-8 ",
+                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-5  ",
                         className
                     )}
                 >
@@ -126,12 +126,12 @@ export const HoverEffect = ({
                 </div>
             </div>
             <div className="charting-libraries">
-                <h2 className="text-2xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
+                <h2 className="text-3xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
                     Charting Libraries :
                 </h2>
                 <div
                     className={cn(
-                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-4 lg:grid-cols-8 ",
+                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-5  ",
                         className
                     )}
                 >
@@ -139,12 +139,12 @@ export const HoverEffect = ({
                 </div>
             </div>
             <div className="software">
-                <h2 className="text-2xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
+                <h2 className="text-3xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
                     Software :
                 </h2>
                 <div
                     className={cn(
-                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-4 lg:grid-cols-8 ",
+                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-5  ",
                         className
                     )}
                 >
