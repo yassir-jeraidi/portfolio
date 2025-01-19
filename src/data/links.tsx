@@ -1,5 +1,7 @@
 import {CpuIcon, FolderGit2Icon, Home, MessageCircleIcon, UserIcon} from 'lucide-react'
-export const LINKS = [
+import {Link} from "@/types";
+
+export const LINKS : Link[] = [
     {
         id : 1,
         title : 'Home',

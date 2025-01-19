@@ -1,15 +1,16 @@
 "use client";
 import React from "react";
-import { LINKS } from "@/components/navbar/links";
+import { LINKS } from "@/data/links";
 import { FloatingDock } from "@/components/ui/flaoting-dock";
 import { usePathname } from "next/navigation";
 import ModeToggle from "@/components/ui/mode-toggle";
+import {Link} from "@/types";
 
 const Navbar = () => {
     const pathname = usePathname();
 
-    const links = LINKS.map(link => ({
-        title: link.title,
+    const links: Link[] = LINKS.map((link : Link) => ({
+        ...link,
         icon: (
             <span
                 className={`hover:text-gray-500 dark:hover:text-gray-200 p-2 ${
@@ -19,7 +20,6 @@ const Navbar = () => {
                 {link.icon}
             </span>
         ),
-        href: link.path,
     }));
 
     return (
