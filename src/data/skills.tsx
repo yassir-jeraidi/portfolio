@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-// Icons - Programming Languages
 import html_icon from "@/assets/skills-icons/html5.svg";
 import css_icon from "@/assets/skills-icons/css.svg";
 import js_icon from "@/assets/skills-icons/javascript.svg";
@@ -10,7 +9,6 @@ import java_icon from "@/assets/skills-icons/java.svg";
 import ts_icon from "@/assets/skills-icons/typescript.svg";
 import python_icon from "@/assets/skills-icons/python.svg";
 
-// Icons - Frontend Frameworks
 import react_icon from "@/assets/skills-icons/react.svg";
 import nextjs_icon from "@/assets/skills-icons/nextjs_icon_dark.svg";
 import angular_icon from "@/assets/skills-icons/angular.svg";
@@ -25,7 +23,6 @@ import react_query_icon from "@/assets/skills-icons/reactquery.svg";
 import react_router_icon from "@/assets/skills-icons/reactrouter.svg";
 import redux_icon from "@/assets/skills-icons/redux.svg";
 
-// Icons - Backend Frameworks
 import nodejs_icon from "@/assets/skills-icons/nodejs.svg";
 import expressjs_icon_dark from "@/assets/skills-icons/Express.js_dark.svg";
 import expressjs_icon_light from "@/assets/skills-icons/Express.js_light.svg";
@@ -33,20 +30,16 @@ import jwt_icon from "@/assets/skills-icons/jwt.svg";
 import laravel_icon from "@/assets/skills-icons/laravel.svg";
 import spring_icon from "@/assets/skills-icons/spring.svg";
 
-// Icons - Databases
 import mongodb_icon from "@/assets/skills-icons/mongodb.svg";
 import mysql_icon from "@/assets/skills-icons/mysql.svg";
 import sqlite_icon from "@/assets/skills-icons/sqlite.svg";
 import supabase_icon from "@/assets/skills-icons/supabase.svg";
 import firebase_icon from "@/assets/skills-icons/firebase.svg";
 
-// Icons - DevOps Tools
 import docker_icon from "@/assets/skills-icons/docker.svg";
 import vercel_light_icon from "@/assets/skills-icons/Vercel_light.svg";
 import vercel_dark_icon from "@/assets/skills-icons/Vercel_dark.svg";
 
-
-// Icons - Software Tools
 import git_icon from "@/assets/skills-icons/git.svg";
 import jetbrains_icon from "@/assets/skills-icons/jetbrainsSolid.svg";
 import vscode_icon from "@/assets/skills-icons/vscode.svg";
@@ -54,14 +47,11 @@ import vite_icon from "@/assets/skills-icons/vitejs.svg";
 import warp_icon from "@/assets/skills-icons/warp.svg";
 import electron_icon from "@/assets/skills-icons/electron.svg";
 
-// Icons - Design Tools
 import figma_icon from "@/assets/skills-icons/figma.svg";
 import canva_icon from "@/assets/skills-icons/canva.svg";
 
-// Icons - Charting Libraries
 import chartjs_icon from "@/assets/skills-icons/chartjs.svg";
 
-// Programming Languages
 export const programmingLanguages = (theme: string | undefined) => [
     { title: "HTML", icon: <Image src={html_icon} alt="HTML" width={50} height={50} /> },
     { title: "CSS", icon: <Image src={css_icon} alt="CSS" width={50} height={50} /> },
@@ -75,7 +65,6 @@ export const programmingLanguages = (theme: string | undefined) => [
     { title: "Python", icon: <Image src={python_icon} alt="Python" width={50} height={50} /> },
 ];
 
-// Frontend Frameworks
 export const frontend = (theme: string | undefined) => [
     { title: "React", icon: <Image src={react_icon} alt="React" width={50} height={50} /> },
     { title: "Next.js", icon: <Image src={nextjs_icon} alt="Next.js" width={50} height={50} /> },
@@ -94,7 +83,6 @@ export const frontend = (theme: string | undefined) => [
     { title: "Redux", icon: <Image src={redux_icon} alt="Redux" width={50} height={50} /> },
 ];
 
-// Backend Frameworks
 export const backend = (theme: string | undefined) => [
     { title: "Node.js", icon: <Image src={nodejs_icon} alt="Node.js" width={50} height={50} /> },
     {
@@ -106,7 +94,6 @@ export const backend = (theme: string | undefined) => [
     { title: "Spring", icon: <Image src={spring_icon} alt="Spring" width={50} height={50} /> },
 ];
 
-// Databases
 export const databases = [
     { title: "MongoDB", icon: <Image src={mongodb_icon} alt="MongoDB" width={40} height={40} /> },
     { title: "MySQL", icon: <Image src={mysql_icon} alt="MySQL" width={50} height={50} /> },
@@ -115,7 +102,6 @@ export const databases = [
     { title: "Supabase", icon: <Image src={supabase_icon} alt="Supabase" width={50} height={50} /> },
 ];
 
-// DevOps Tools
 export const devops = (theme: string | undefined) => [
     { title: "Docker", icon: <Image src={docker_icon} alt="Docker" width={50} height={50} /> },
     {
@@ -124,7 +110,6 @@ export const devops = (theme: string | undefined) => [
     },
 ];
 
-// Software Tools
 export const software = (theme: string | undefined) => [
     { title: "Git", icon: <Image src={git_icon} alt="Git" width={50} height={50} /> },
     { title: "JetBrains", icon: <Image src={jetbrains_icon} alt="JetBrains" width={50} height={50} /> },
@@ -134,13 +119,11 @@ export const software = (theme: string | undefined) => [
     { title: "Electron", icon: <Image src={electron_icon} alt="Electron" width={50} height={50} /> },
 ];
 
-// Design Tools
 export const design = [
     { title: "Figma", icon: <Image src={figma_icon} alt="Figma" width={50} height={50} /> },
     { title: "Canva", icon: <Image src={canva_icon} alt="Canva" width={50} height={50} /> },
 ];
 
-// Charting Libraries
 export const chartingLibraries = [
     { title: "Chart.js", icon: <Image src={chartjs_icon} alt="Chart.js" width={50} height={50} /> },
 ];
