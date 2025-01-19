@@ -4,7 +4,7 @@ import { LINKS } from "@/data/links";
 import { FloatingDock } from "@/components/ui/flaoting-dock";
 import { usePathname } from "next/navigation";
 import ModeToggle from "@/components/ui/mode-toggle";
-import {Link} from "@/types";
+import {type Link} from "@/types";
 
 const Navbar = () => {
     const pathname = usePathname();

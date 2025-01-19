@@ -9,16 +9,8 @@ import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import {ProjectCardProps} from "@/types";
 
-interface ProjectCardProps {
-    title: string;
-    description: string;
-    longDescription: string;
-    technologies: string[];
-    images: string[];
-    liveUrl?: string;
-    githubUrl?: string;
-}
 
 const TechBadge = memo(({ tech }: { tech: string }) => (
     <Badge

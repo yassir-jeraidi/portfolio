@@ -9,13 +9,15 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
+import type {Link as LinkType} from "@/types";
+
 
 export const FloatingDock = ({
                                  items,
                                  desktopClassName,
                                  mobileClassName,
                              }: {
-    items: { title: string; icon: React.ReactNode; href: string }[];
+    items: LinkType[];
     desktopClassName?: string;
     mobileClassName?: string;
 }) => {
@@ -31,7 +33,7 @@ const FloatingDockDesktop = ({
                                  items,
                                  className,
                              }: {
-    items: { title: string; icon: React.ReactNode; href: string }[];
+    items: LinkType[];
     className?: string;
 }) => {
     let mouseX = useMotionValue(Infinity);
@@ -55,13 +57,13 @@ const FloatingDockMobile = ({
                                 items,
                                 className,
                             }: {
-    items: { title: string; icon: React.ReactNode; href: string }[];
+    items: LinkType[];
     className?: string;
 }) => {
     return (
         <div className={cn("flex md:hidden h-16 gap-10 items-center justify-center", className)}>
             {items.map((item) => (
-                <Link href={item.href} key={item.title}>
+                <Link href={item.path} key={item.title}>
                     <div className="flex flex-col items-center justify-center">
                         <span className="text-neutral-500 dark:text-neutral-300">
                             {item.icon}
@@ -77,12 +79,12 @@ function IconContainer({
                            mouseX,
                            title,
                            icon,
-                           href,
+                           path,
                        }: {
     mouseX: MotionValue;
     title: string;
     icon: React.ReactNode;
-    href: string;
+    path: string;
 }) {
     let ref = useRef<HTMLDivElement>(null);
 
@@ -127,7 +129,7 @@ function IconContainer({
     const [hovered, setHovered] = useState(false);
 
     return (
-        <Link href={href}>
+        <Link href={path}>
             <motion.div
                 ref={ref}
                 style={{ width, height }}
