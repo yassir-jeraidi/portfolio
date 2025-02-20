@@ -1,7 +1,8 @@
 import Home from "@/components/home";
 import {JSX} from "react";
+import {Metadata} from "next";
 
-export const metadata = {
+export const metadata : Metadata= {
     title: "Jeraidi Yassir",
     description: "Welcome to my portfolio",
 }
