@@ -4,7 +4,7 @@ import {motion} from "framer-motion";
 import {FlipWords} from "@/components/ui/flip-words";
 import {Button} from "@/components/ui/button";
 import Image from "next/image";
-import me from "@/assets/me/me.png";
+import me from "@/assets/me/me.jpeg";
 import Link from "next/link";
 import type {Link as LinkType} from "@/types";
 import { SOCIAL_MEDIA_LINKS} from "@/data/social-media-links";
@@ -61,19 +61,19 @@ export default function Home(): JSX.Element {
                         }
 
                     </motion.div>
-                    <a href='/cv-jy.pdf' download>
-                        <Button className='my-4'>
+                    {/*<Link href='/cv-jy.pdf' download target="_blank">*/}
+                        <Button className='my-4' disabled>
                             view resume
                             <span>
                                 <DownloadIcon className="w-5 h-5 mx-2" />
                             </span>
                         </Button>
-                    </a>
+                    {/*</Link>*/}
                 </div>
             </motion.div>
 
-            <motion.div className="rs" variants={itemVariants}>
-                <Image alt='me' src={me} width={800}/>
+            <motion.div className="rs" variants={itemVariants} >
+                <Image alt='me' className='rounded-full hover:scale-105 transition-all' src={me} width={800}/>
             </motion.div>
         </motion.div>
     );
