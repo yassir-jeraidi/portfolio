@@ -1,24 +1,18 @@
 import {JSX} from "react";
+import {StaticImageData} from "next/image";
 
 export interface ProjectCardProps {
     title: string;
     description: string;
     longDescription: string;
     technologies: string[];
-    images: string[];
+    images: StaticImageData[];
     liveUrl?: string;
     githubUrl?: string;
 }
 
-export interface Project {
+export interface Project extends ProjectCardProps{
     id: number;
-    title: string;
-    description: string;
-    longDescription: string;
-    technologies: string[];
-    images: string[];
-    liveUrl: string;
-    githubUrl: string;
 }
 
 export interface Link {
