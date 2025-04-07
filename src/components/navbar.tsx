@@ -14,7 +14,7 @@ const Navbar = () => {
         icon: (
             <span
                 className={`hover:text-gray-500 dark:hover:text-gray-200 p-2 ${
-                    pathname === link.path ? "text-black dark:text-gray-100" : "text-gray-500"
+                    pathname === link.path ? "text-black dark:text-white" : "text-gray-400 dark:text-gray-600"
                 }`}
             >
                 {link.icon}
