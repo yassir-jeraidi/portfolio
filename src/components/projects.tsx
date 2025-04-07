@@ -4,9 +4,9 @@ import {type Project} from "@/types";
 
 export default function Projects() {
     return (
-        <div className="w-full min-h-screen my-10 flex flex-wrap md:gap-5 justify-center items-center ">
+        <div className="w-full min-h-screen my-20 flex flex-wrap md:gap-5 justify-center items-center ">
             {
-                PROJECTS_DATA.map((project: Project) => (
+                PROJECTS_DATA.sort((a , b) => b.id - a.id).map((project: Project) => (
                     <ProjectCard {...project} key={project.id}/>
                 ))
             }

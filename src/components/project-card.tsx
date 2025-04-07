@@ -1,18 +1,29 @@
 "use client"
-import { memo, useState, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ExternalLink, Github, Code2, Boxes, GitGraphIcon, EyeIcon } from 'lucide-react';
-import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
-import { CardContainer, CardBody, CardItem } from '@/components/ui/3d-card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { cn } from '@/lib/utils';
+import {memo, useState, useCallback, useMemo} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {
+    ChevronLeft,
+    ChevronRight,
+    ExternalLink,
+    Github,
+    Code2,
+    Boxes,
+    GitGraphIcon,
+    EyeIcon,
+    WalletMinimalIcon
+} from 'lucide-react';
+import {Dialog, DialogContent, DialogTitle} from '@/components/ui/dialog';
+import {CardContainer, CardBody, CardItem} from '@/components/ui/3d-card';
+import {Button} from '@/components/ui/button';
+import {Badge} from '@/components/ui/badge';
+import {cn} from '@/lib/utils';
 import Image from "next/image";
-import { useTheme } from "next-themes";
+import {useTheme} from "next-themes";
 import {ProjectCardProps} from "@/types";
+import Link from "next/link";
 
 
-const TechBadge = memo(({ tech }: { tech: string }) => (
+const TechBadge = memo(({tech}: { tech: string }) => (
     <Badge
         variant="secondary"
         className="px-3 py-1 text-sm"
@@ -32,7 +43,7 @@ const ImageDots = memo(({
     onClick: (index: number) => void;
 }) => (
     <div className="hidden absolute -bottom-4 right-4 md:flex gap-2">
-        {Array.from({ length: total }, (_, index) => (
+        {Array.from({length: total}, (_, index) => (
             <button
                 key={index}
                 onClick={(e) => {
@@ -64,7 +75,7 @@ export const ProjectCard = memo(function ProjectCard({
     const [isOpen, setIsOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isImageDialogOpen, setIsImageDialogOpen] = useState(false);
-    const { theme } = useTheme();
+    const {theme} = useTheme();
 
     const nextImage = useCallback(() => {
         setCurrentImageIndex(prev => (prev + 1) % images.length);
@@ -90,7 +101,7 @@ export const ProjectCard = memo(function ProjectCard({
                 }}
                 aria-label="Previous image"
             >
-                <ChevronLeft className="h-6 w-6" />
+                <ChevronLeft className="h-6 w-6"/>
             </Button>
             <Button
                 variant="ghost"
@@ -102,7 +113,7 @@ export const ProjectCard = memo(function ProjectCard({
                 }}
                 aria-label="Next image"
             >
-                <ChevronRight className="h-6 w-6" />
+                <ChevronRight className="h-6 w-6"/>
             </Button>
         </>
     ), [images.length, nextImage, previousImage]);
@@ -111,7 +122,6 @@ export const ProjectCard = memo(function ProjectCard({
         <div className="flex gap-4 pt-4">
             {liveUrl && (
                 <Button
-                    disabled
                     variant="default"
                     className="flex items-center gap-2"
                     onClick={(e) => {
@@ -119,13 +129,12 @@ export const ProjectCard = memo(function ProjectCard({
                         window.open(liveUrl, '_blank');
                     }}
                 >
-                    <ExternalLink className="h-4 w-4" />
+                    <ExternalLink className="h-4 w-4"/>
                     Live Demo
                 </Button>
             )}
             {githubUrl && (
                 <Button
-                    disabled
                     variant="outline"
                     className="flex items-center gap-2"
                     onClick={(e) => {
@@ -133,7 +142,7 @@ export const ProjectCard = memo(function ProjectCard({
                         window.open(githubUrl, '_blank');
                     }}
                 >
-                    <Github className="h-4 w-4" />
+                    <Github className="h-4 w-4"/>
                     View Code
                 </Button>
             )}
@@ -143,17 +152,19 @@ export const ProjectCard = memo(function ProjectCard({
     return (
         <div className="project-card">
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                initial={{opacity: 0, y: 20}}
+                animate={{opacity: 1, y: 0}}
+                transition={{duration: 0.5}}
             >
                 <CardContainer className="inter-var mb-4 sm:mb-10 ">
-                    <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-4 sm:p-6 border">
+                    <CardBody
+                        className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-4 sm:p-6 border">
                         {/* Card content */}
                         <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
                             {title}
                         </CardItem>
-                        <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
+                        <CardItem as="p" translateZ="60"
+                                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
                             {description}
                         </CardItem>
                         <CardItem translateZ="100" className="w-full mt-4">
@@ -171,21 +182,27 @@ export const ProjectCard = memo(function ProjectCard({
                                 translateZ={20}
                                 translateX={-40}
                                 as="button"
-                                className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                                className="flex items-center gap-2 px-4 py-2 border rounded-xl text-xs font-normal dark:text-white"
                                 onClick={() => setIsOpen(true)}
                             >
-                                <EyeIcon className="h-5 w-5" />
-                                View Project
+                                    <EyeIcon className="h-5 w-5"/>
+                                    View Project
                             </CardItem>
-                            <CardItem
-                                translateZ={20}
-                                translateX={40}
-                                as="button"
-                                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-                            >
-                                <GitGraphIcon className="h-5 w-5" />
-                                Source Code
-                            </CardItem>
+                            {
+                                githubUrl && (
+                                        <Link href={githubUrl} target="_blank">
+                                    <CardItem
+                                        translateZ={20}
+                                        translateX={40}
+                                        as="button"
+                                        className="flex items-center gap-2 px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                                    >
+                                            <GitGraphIcon className="h-5 w-5"/>
+                                            Source Code
+                                    </CardItem>
+                                        </Link>
+                                )
+                            }
                         </div>
                     </CardBody>
                 </CardContainer>
@@ -193,27 +210,34 @@ export const ProjectCard = memo(function ProjectCard({
 
             {/* Project Details Dialog */}
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
-                <DialogContent className="w-[90vw] p-1 pt-10 md:p-5 rounded lg:max-w-screen-lg overflow-y-scroll max-h-[80vh] bg-white dark:bg-black/20 backdrop-blur">
+                <DialogContent
+                    className="w-[90vw] p-1 pt-10 md:p-5 rounded lg:max-w-screen-lg overflow-y-scroll max-h-[80vh] bg-white dark:bg-black/20 backdrop-blur">
                     <DialogTitle className="sr-only">{title} - Project Details</DialogTitle>
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 20 }}
+                        initial={{opacity: 0, y: 20}}
+                        animate={{opacity: 1, y: 0}}
+                        exit={{opacity: 0, y: 20}}
                         className="h-full"
                     >
                         <div className="relative aspect-video">
                             <AnimatePresence initial={false} mode="wait">
-                                <motion.img
+                                <motion.div
                                     key={currentImageIndex}
-                                    src={images[currentImageIndex]}
-                                    alt={`${title} screenshot ${currentImageIndex + 1}`}
-                                    className="w-full h-full object-contain"
                                     initial={{ opacity: 0, x: 100 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     exit={{ opacity: 0, x: -100 }}
                                     transition={{ duration: 0.3 }}
                                     onClick={() => setIsImageDialogOpen(true)}
-                                />
+                                    className="w-full h-full object-contain"
+                                >
+                                    <Image
+                                        src={images[currentImageIndex].src}
+                                        alt={`${title} screenshot ${currentImageIndex + 1}`}
+                                        width={1024}
+                                        height={768}
+                                        className="w-full h-full object-contain"
+                                    />
+                                </motion.div>
                             </AnimatePresence>
 
                             {navigationButtons}
@@ -232,19 +256,19 @@ export const ProjectCard = memo(function ProjectCard({
 
                             <div className="space-y-4">
                                 <div className="flex items-center gap-2 text-muted-foreground">
-                                    <Code2 className="h-5 w-5" />
+                                    <Code2 className="h-5 w-5"/>
                                     <h3 className="font-semibold">Tech Stack</h3>
                                 </div>
                                 <div className="flex flex-wrap gap-2">
                                     {technologies.map(tech => (
-                                        <TechBadge key={tech} tech={tech} />
+                                        <TechBadge key={tech} tech={tech}/>
                                     ))}
                                 </div>
                             </div>
 
                             <div className="space-y-4">
                                 <div className="flex items-center gap-2 text-muted-foreground">
-                                    <Boxes className="h-5 w-5" />
+                                    <Boxes className="h-5 w-5"/>
                                     <h3 className="font-semibold">About the Project</h3>
                                 </div>
                                 <p className="text-muted-foreground leading-relaxed">
@@ -260,12 +284,13 @@ export const ProjectCard = memo(function ProjectCard({
 
             {/* Image Preview Dialog */}
             <Dialog open={isImageDialogOpen} onOpenChange={setIsImageDialogOpen}>
-                <DialogContent className="w-[90vw] p-1 pt-10 md:p-5 rounded lg:max-w-screen-lg overflow-y-scroll max-h-[80vh] bg-white dark:bg-black/20 backdrop-blur">
+                <DialogContent
+                    className="w-[90vw] p-1 pt-10 md:p-5 rounded lg:max-w-screen-lg overflow-y-scroll max-h-[80vh] bg-white dark:bg-black/20 backdrop-blur">
                     <DialogTitle className="sr-only">{title} - Image</DialogTitle>
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 20 }}
+                        initial={{opacity: 0, y: 20}}
+                        animate={{opacity: 1, y: 0}}
+                        exit={{opacity: 0, y: 20}}
                         className="h-full"
                     >
                         <Image
