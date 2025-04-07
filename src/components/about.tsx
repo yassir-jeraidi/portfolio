@@ -1,17 +1,12 @@
 "use client"
 import aboutMe from '@/assets/me/about-me.png'
 import Image from "next/image";
-import {
-    Timeline,
-    TimelineDot,
-    TimelineHeading,
-    TimelineItem,
-    TimelineLine,
-    TimelineContent
-} from "@/components/ui/timeline";
 import {TracingBeam} from "@/components/ui/tracing-beam";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Timeline from "@/components/timeline";
+import {EDUCATIONS} from "@/data/educations";
+import {EXPERIENCES} from "@/data/experiences";
 
 export default function About() {
     const aboutRef = useRef(null);
@@ -23,7 +18,7 @@ export default function About() {
     const experienceInView = useInView(experienceRef, { once: true });
 
     return (
-        <TracingBeam className="md:px-8 pb-12 md:pb-20">
+        <TracingBeam className="md:px-8 pb-12 md:pb-28">
             <div className="md:flex md:py-20 justify-center flex-col items-center gap-4">
                 <div className="ls">
                     <motion.div
@@ -66,122 +61,28 @@ export default function About() {
             </div>
             <div className='p-4'>
                 <motion.div
-                    ref={educationRef}
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={educationInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.5 }}
-                >
-                    <h1 className="text-3xl w-fit my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
-                        <span>Education</span>
-                    </h1>
-                    <Timeline positions={'left'} className='w-full'>
-                        <TimelineItem status="done">
-                            <TimelineHeading>
-                                Master&apos;s degree in Distributed Systems and Artificial Intelligence
-                            </TimelineHeading>
-                            <TimelineDot status="current"/>
-                            <TimelineLine/>
-                            <TimelineContent>
-                                <p className='text-sm my-2 text-neutral-500'>
-                                    September 2024 - ...
-                                </p>
-                                ENSET Mohammedia
-                            </TimelineContent>
-                        </TimelineItem>
-                        <TimelineItem>
-                            <TimelineHeading>
-                                Professional Bachelor in Software Engineering and Advanced Administration of Computer
-                                Systems and Networks
-                            </TimelineHeading>
-                            <TimelineDot status="done"/>
-                            <TimelineLine/>
-                            <TimelineContent>
-                                <p className='text-sm my-2 text-neutral-500'>
-                                    October 2023 - July 2024.
-                                </p>
-                                EST Casablanca
-                            </TimelineContent>
-                        </TimelineItem>
-                        <TimelineItem>
-                            <TimelineHeading>Specialized Technician in Web Programming And
-                                Technologies</TimelineHeading>
-                            <TimelineDot status="done"/>
-                            <TimelineLine/>
-                            <TimelineContent>
-                                <p className='text-sm my-2 text-neutral-500'>
-                                    September 2021 - July 2023.
-                                </p>
-                                ISFO Casablanca
-                            </TimelineContent>
-                        </TimelineItem>
-                        <TimelineItem>
-                            <TimelineHeading>
-                                Baccalaureate In Life and Earth Sciences
-                            </TimelineHeading>
-                            <TimelineDot status="done"/>
-                            <TimelineContent>
-                                <p className='text-sm my-2 text-neutral-500'>
-                                    June 2021.
-                                </p>
-                                El Kindi Bouskoura High School
-                            </TimelineContent>
-                        </TimelineItem>
-                    </Timeline>
-                </motion.div>
-            </div>
-            <div className='p-4'>
-                <motion.div
                     ref={experienceRef}
                     initial={{ opacity: 0, y: 50 }}
                     animate={experienceInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5 }}
                 >
-                    <h1 className="text-3xl w-fit my-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
+                    <h1 className="text-3xl w-fit my-6 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
                         <span>Experience</span>
                     </h1>
-                    <Timeline positions={'left'} className='w-full'>
-                        <TimelineItem>
-                            <TimelineHeading>
-                                ATOS | Application developer
-                            </TimelineHeading>
-                            <TimelineDot status="done"/>
-                            <TimelineLine/>
-                            <TimelineContent>
-                                <p className='text-sm my-2 text-neutral-500'>
-                                    April 2024 - August 2024.
-                                </p>
-                                <ul className='text-sm list-disc ps-6'>
-                                    <li>
-                                        Development of a desktop application for the calculation of overtime specific to
-                                        ATOS.
-                                    </li>
-                                    <li>
-                                        Development of a web application for administrative management
-                                    </li>
-                                    <li>
-                                        Development of a blog management web application.
-                                    </li>
-                                </ul>
-                            </TimelineContent>
-                        </TimelineItem>
-                        <TimelineItem status="done">
-                            <TimelineHeading>
-                                CDC Digital and AI | Web developer
-                            </TimelineHeading>
-                            <TimelineDot status="done"/>
-                            <TimelineContent>
-                                <p className='text-sm my-2 text-neutral-500'>
-                                    Mars 2023 - May 2023.
-                                </p>
-                                <ul className='text-sm list-disc ps-6'>
-                                    <li>
-                                        Development of a website allowing company employees to print various management
-                                        documents.
-                                    </li>
-                                </ul>
-                            </TimelineContent>
-                        </TimelineItem>
-                    </Timeline>
+                    <Timeline data={EXPERIENCES} />
+                </motion.div>
+            </div>
+            <div className='p-4'>
+                <motion.div
+                    ref={educationRef}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={educationInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.5 }}
+                >
+                    <h1 className="text-3xl w-fit my-6 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
+                        <span>Education</span>
+                    </h1>
+                    <Timeline data={EDUCATIONS} />
                 </motion.div>
             </div>
         </TracingBeam>
