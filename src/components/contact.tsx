@@ -45,6 +45,8 @@ export default function Contact(): JSX.Element {
     const formRef = useRef(null);
     const inView = useInView(formRef, { once: true });
 
+
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -52,7 +54,7 @@ export default function Contact(): JSX.Element {
             transition={{ duration: 0.5 }}
             className="md:flex md:ps-44 h-screen py-8 md:py-0 justify-center flex-col items-center gap-4 px-4"
         >
-            <div className="flex flex-col">
+            <div className="flex flex-col z-10 ">
                 <main className="flex-1">
                     <section className="w-full py-12 md:py-24 lg:py-32">
                         <div className="md:px-6">

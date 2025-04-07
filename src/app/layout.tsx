@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar";
 import {Spotlight} from "@/components/ui/spotlight";
 import {Toaster} from "@/components/ui/sonner";
 import React, {JSX} from "react";
+import {cn} from "@/lib/utils";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -24,13 +25,24 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
             defaultTheme="system"
             enableSystem
         >
-            <div
-                className=" min-h-screen pb-20 md:pb-0 w-full px-6 md:px-36 rounded-md  dark:bg-black/[0.95]  bg-grid-sky-600/[0.05] relative overflow-hidden ">
+            <div className="relative min-h-screen w-full bg-white dark:bg-black">
+                <div
+                    className={cn(
+                        "absolute inset-0",
+                        "[background-size:40px_40px]",
+                        "[background-image:linear-gradient(to_right,#e4e4e7_0.1px,transparent_0.1px),linear-gradient(to_bottom,#e4e4e7_0.3px,transparent_0.3px)]",
+                        "dark:[background-image:linear-gradient(to_right,#262626_0.3px,transparent_0.3px),linear-gradient(to_bottom,#262626_0.3px,transparent_0.3px)]",
+                    )}
+                />
+                <div
+                    className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_1%,black)] dark:bg-black"></div>
                 <Spotlight
                     className="-top-40 left-0 md:left-60 md:-top-20"
                 />
                 <Navbar/>
-                {children}
+                <div className="z-50">
+                    {children}
+                </div>
                 <Toaster/>
             </div>
         </ThemeProvider>
