@@ -26,7 +26,7 @@ export default function Home(): JSX.Element {
 
     return (
         <motion.div
-            className="md:flex md:ps-40 h-screen justify-center items-center gap-4"
+            className="md:flex md:ps-40 min-h-screen justify-center items-center gap-4"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
