@@ -211,7 +211,7 @@ export const ProjectCard = memo(function ProjectCard({
             {/* Project Details Dialog */}
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
                 <DialogContent
-                    className="w-[90vw] p-1 pt-10 md:p-5 rounded lg:max-w-screen-lg overflow-y-scroll max-h-[80vh] bg-white dark:bg-black/20 backdrop-blur">
+                    className="w-[90vw] p-1 pt-10 md:p-5 rounded lg:max-w-(--breakpoint-lg) overflow-y-scroll max-h-[80vh] bg-white dark:bg-black/20 backdrop-blur-sm">
                     <DialogTitle className="sr-only">{title} - Project Details</DialogTitle>
                     <motion.div
                         initial={{opacity: 0, y: 20}}
@@ -285,7 +285,7 @@ export const ProjectCard = memo(function ProjectCard({
             {/* Image Preview Dialog */}
             <Dialog open={isImageDialogOpen} onOpenChange={setIsImageDialogOpen}>
                 <DialogContent
-                    className="w-[90vw] p-1 pt-10 md:p-5 rounded lg:max-w-screen-lg overflow-y-scroll max-h-[80vh] bg-white dark:bg-black/20 backdrop-blur">
+                    className="w-[90vw] p-1 pt-10 md:p-5 rounded lg:max-w-(--breakpoint-lg) overflow-y-scroll max-h-[80vh] bg-white dark:bg-black/20 backdrop-blur-sm">
                     <DialogTitle className="sr-only">{title} - Image</DialogTitle>
                     <motion.div
                         initial={{opacity: 0, y: 20}}

@@ -33,7 +33,7 @@ export default function Home(): JSX.Element {
         >
             <motion.div className="ls" variants={itemVariants}>
                 <div className="p-4 max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0">
-                    <h1 className="font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-400 to-neutral-600 bg-opacity-50">
+                    <h1 className="font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-400 to-neutral-600 bg-opacity-50">
                         👋Hi, Welcome There!
                     </h1>
                     <div

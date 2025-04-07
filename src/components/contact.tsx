@@ -58,7 +58,7 @@ export default function Contact(): JSX.Element {
                         <div className="md:px-6">
                             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                                 <div className="space-y-4">
-                                    <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
+                                    <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
                                         Get in Touch
                                     </h1>
                                     <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">

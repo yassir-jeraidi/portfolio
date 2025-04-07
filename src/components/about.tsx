@@ -28,7 +28,7 @@ export default function About() {
                         transition={{ duration: 0.5 }}
                         className="ps-4 max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0"
                     >
-                        <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
+                        <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
                             About Me
                         </h1>
                         <div className="mt-4 font-normal text-base gap-2 text-neutral-500 flex justify-center items-center flex-col">
@@ -66,7 +66,7 @@ export default function About() {
                     animate={experienceInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5 }}
                 >
-                    <h1 className="text-3xl w-fit my-6 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
+                    <h1 className="text-3xl w-fit my-6 font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
                         <span>Experience</span>
                     </h1>
                     <Timeline data={EXPERIENCES} />
@@ -79,7 +79,7 @@ export default function About() {
                     animate={educationInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5 }}
                 >
-                    <h1 className="text-3xl w-fit my-6 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
+                    <h1 className="text-3xl w-fit my-6 font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
                         <span>Education</span>
                     </h1>
                     <Timeline data={EDUCATIONS} />

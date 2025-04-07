@@ -35,7 +35,7 @@ export default function Timeline(
                         <div className="space-y-3">
                             <div className="flex items-center gap-3">
                                 <div
-                                    className="flex-shrink-0 h-9 w-9 bg-accent rounded-full flex items-center justify-center overflow-hidden">
+                                    className="shrink-0 h-9 w-9 bg-accent rounded-full flex items-center justify-center overflow-hidden">
                                     <Image src={companyLogo} alt="atos logo" width={40} height={40}/>
                                 </div>
                                 <span className="text-base sm:text-lg font-semibold text-gray-500 md:text-xl dark:text-gray-400">

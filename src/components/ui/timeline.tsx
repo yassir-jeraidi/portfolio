@@ -68,7 +68,7 @@ const timelineDotVariants = cva(
   {
     variants: {
       status: {
-        default: "[&>*]:hidden",
+        default: "*:hidden",
         current:
           "[&>*:not(.lucide-circle)]:hidden [&>.lucide-circle]:fill-current [&>.lucide-circle]:text-current",
         done: "bg-primary [&>*:not(.lucide-check)]:hidden [&>.lucide-check]:text-background",
