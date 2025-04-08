@@ -3,7 +3,7 @@ import React from 'react';
 import {useTheme} from "next-themes";
 import {MoonIcon, SunIcon} from "@radix-ui/react-icons";
 import {Button} from "@/components/ui/button";
-import {motion} from "framer-motion";
+import {motion} from "motion/react";
 
 const ModeToggle = () => {
     const {setTheme, theme} = useTheme()
@@ -18,7 +18,7 @@ const ModeToggle = () => {
         <Button
             variant='outline'
             size='icon'
-            className="dark:bg-neutral-900 bg-white"
+            className="dark:bg-neutral-900 bg-white cursor-pointer"
             onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
         >
             {
