@@ -1,194 +1,37 @@
-'use client'
-
 import {cn} from "@/lib/utils";
-import {AnimatePresence, motion, useInView} from "framer-motion";
-import React, {useState, useRef} from "react";
-import {
-    programmingLanguages,
-    frontend,
-    design,
-    backend,
-    databases,
-    devops,
-    chartingLibraries,
-    software
-} from "@/data/skills";
-import {useTheme} from "next-themes";
-
-const cardVariants = {
-    hiddenLeft: {opacity: 0, x: -100},
-    hiddenRight: {opacity: 0, x: 100},
-    hiddenTop: {opacity: 0, y: -100},
-    hiddenBottom: {opacity: 0, y: 100},
-    visible: {opacity: 1, x: 0, y: 0},
-    exit: {opacity: 0, x: 0, y: 0},
-};
+import { AnimatePresence, motion } from "motion/react";
+import {JSX, useState} from "react";
 
 export const HoverEffect = ({
+                                items,
                                 className,
                             }: {
+    items: {
+        title: string;
+        icon: JSX.Element;
+    }[];
     className?: string;
 }) => {
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-    const {theme} = useTheme() || "light";
-
-    const handleClick = (idx: number): void => {
-        if (hoveredIndex === idx) {
-            setHoveredIndex(null); // Deselect if the same card is clicked
-        } else {
-            setHoveredIndex(idx);  // Select the clicked card
-        }
-    };
 
     return (
-        <motion.div
-            initial={{opacity: 0, y: 50}}
-            animate={{opacity: 1, y: 0}}
-            exit={{opacity: 0, y: 50}}
-            transition={{duration: 0.5}}
+        <div
+            className={cn(
+                "grid grid-cols-2 md:grid-cols-3  lg:grid-cols-4  py-2",
+                className
+            )}
         >
-            <div className="programming-languages">
-                <h2 className="text-3xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
-                    Programming Languages :
-                </h2>
+            {items.map((item, idx) => (
                 <div
-                    className={cn(
-                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-5  ",
-                        className
-                    )}
-                >
-                    <AnimatedCard skills={programmingLanguages(theme)} handleClick={handleClick}/>
-                </div>
-            </div>
-            <div className="frontend">
-                <h2 className="text-3xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
-                    Frontend :
-                </h2>
-                <div
-                    className={cn(
-                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-5  ",
-                        className
-                    )}
-                >
-                    <AnimatedCard skills={frontend(theme)} handleClick={handleClick}/>
-                </div>
-            </div>
-            <div className="design">
-                <h2 className="text-3xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
-                    Design :
-                </h2>
-                <div
-                    className={cn(
-                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-5  ",
-                        className
-                    )}
-                >
-                    <AnimatedCard skills={design} handleClick={handleClick}/>
-                </div>
-            </div>
-            <div className="backend">
-                <h2 className="text-3xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
-                    Backend :
-                </h2>
-                <div
-                    className={cn(
-                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-5  ",
-                        className
-                    )}
-                >
-                    <AnimatedCard skills={backend(theme)} handleClick={handleClick}/>
-                </div>
-            </div>
-            <div className="databases">
-                <h2 className="text-3xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
-                    Databases :
-                </h2>
-                <div
-                    className={cn(
-                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-5  ",
-                        className
-                    )}
-                >
-                    <AnimatedCard skills={databases} handleClick={handleClick}/>
-                </div>
-            </div>
-            <div className="devops">
-                <h2 className="text-3xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
-                    DevOps :
-                </h2>
-                <div
-                    className={cn(
-                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-5  ",
-                        className
-                    )}
-                >
-                    <AnimatedCard skills={devops(theme)} handleClick={handleClick}/>
-                </div>
-            </div>
-            <div className="charting-libraries">
-                <h2 className="text-3xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
-                    Charting Libraries :
-                </h2>
-                <div
-                    className={cn(
-                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-5  ",
-                        className
-                    )}
-                >
-                    <AnimatedCard skills={chartingLibraries} handleClick={handleClick}/>
-                </div>
-            </div>
-            <div className="software">
-                <h2 className="text-3xl mx-2 my-3 font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
-                    Software :
-                </h2>
-                <div
-                    className={cn(
-                        "grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-5  ",
-                        className
-                    )}
-                >
-                    <AnimatedCard skills={software(theme)} handleClick={handleClick}/>
-                </div>
-            </div>
-        </motion.div>
-    );
-};
-
-
-const AnimatedCard = (
-    {
-        skills,
-        handleClick,
-    }: {
-        skills: { title: string; icon: React.ReactNode }[];
-        handleClick: (idx: number) => void;
-    }
-) => {
-    let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-    const ref = useRef(null);
-    const inView = useInView(ref, {once: true});
-    return (
-        skills.map((item, idx) => {
-
-            return (
-                <motion.div
-                    key={idx}
-                    className="relative group p-2 h-full w-full cursor-pointer"
+                    key={item?.title}
+                    className="relative group  block p-2 h-full w-full"
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
-                    onClick={() => handleClick(idx)}  // Handle clicks for mobile
-                    initial={idx % 4 === 0 ? "hiddenLeft" : idx % 4 === 1 ? "hiddenRight" : idx % 4 === 2 ? "hiddenTop" : "hiddenBottom"}
-                    animate={inView ? "visible" : ""}
-                    exit="exit"
-                    variants={cardVariants}
-                    transition={{duration: 0.5, delay: idx * 0.1}}
-                    ref={ref}
                 >
                     <AnimatePresence>
                         {hoveredIndex === idx && (
                             <motion.span
-                                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
+                                className="absolute inset-0 h-full w-full  bg-neutral-200 dark:bg-slate-800/[0.8] block  rounded-3xl"
                                 layoutId="hoverBackground"
                                 initial={{opacity: 0}}
                                 animate={{
@@ -203,14 +46,14 @@ const AnimatedCard = (
                         )}
                     </AnimatePresence>
                     <Card>
-                        <div className="mb-5">{item.icon}</div>
-                        <CardTitle>{item.title}</CardTitle>
+                        <CardTitle className="text-gray-600 dark:text-white">{item.title}</CardTitle>
+                        <CardDescription>{item.icon}</CardDescription>
                     </Card>
-                </motion.div>
-            );
-        })
+                </div>
+            ))}
+        </div>
     );
-}
+};
 
 export const Card = ({
                          className,
@@ -222,15 +65,13 @@ export const Card = ({
     return (
         <div
             className={cn(
-                "rounded-2xl h-[150px] w-[150px] flex flex-col justify-center items-center " +
-                " overflow-hidden  border text-slate-500 dark:bg-slate-800/[0.1]  border-black" +
-                "  dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+                "rounded-2xl backdrop-blur-2xl h-full max-h-[150px] md:max-h-full w-full md:p-4 overflow-hidden border dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
                 className
             )}
         >
-            {
-                children
-            }
+            <div className="relative z-50">
+                <div className="p-4 flex justify-center items-center flex-col gap-4">{children}</div>
+            </div>
         </div>
     );
 };
@@ -242,8 +83,26 @@ export const CardTitle = ({
     children: React.ReactNode;
 }) => {
     return (
-        <h4 className={cn("font-bold tracking-wide text-center absolute bottom-5", className)}>
+        <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
             {children}
         </h4>
+    );
+};
+export const CardDescription = ({
+                                    className,
+                                    children,
+                                }: {
+    className?: string;
+    children: React.ReactNode;
+}) => {
+    return (
+        <p
+            className={cn(
+                "mb-4 text-zinc-400 tracking-wide leading-relaxed text-sm",
+                className
+            )}
+        >
+            {children}
+        </p>
     );
 };
