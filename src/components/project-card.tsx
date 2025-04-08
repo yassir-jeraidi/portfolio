@@ -1,6 +1,6 @@
 "use client"
 import {memo, useState, useCallback, useMemo} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import {motion, AnimatePresence} from 'motion/react';
 import {
     ChevronLeft,
     ChevronRight,
@@ -10,7 +10,6 @@ import {
     Boxes,
     GitGraphIcon,
     EyeIcon,
-    WalletMinimalIcon
 } from 'lucide-react';
 import {Dialog, DialogContent, DialogTitle} from '@/components/ui/dialog';
 import {CardContainer, CardBody, CardItem} from '@/components/ui/3d-card';
