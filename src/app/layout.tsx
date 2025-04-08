@@ -25,19 +25,19 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
             defaultTheme="system"
             enableSystem
         >
-            <div className="relative min-h-screen w-full bg-white dark:bg-black">
+            <div className="relative min-h-screen w-full ">
                 <div
                     className={cn(
-                        "absolute inset-0",
+                        "absolute -z-30 inset-0",
                         "[background-size:40px_40px]",
                         "[background-image:linear-gradient(to_right,#e4e4e7_0.1px,transparent_0.1px),linear-gradient(to_bottom,#e4e4e7_0.3px,transparent_0.3px)]",
                         "dark:[background-image:linear-gradient(to_right,#262626_0.3px,transparent_0.3px),linear-gradient(to_bottom,#262626_0.3px,transparent_0.3px)]",
                     )}
                 />
                 <div
-                    className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_1%,black)] dark:bg-black"></div>
+                    className="pointer-events-none absolute inset-0 -z-20 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_1%,black)] dark:bg-black"></div>
                 <Spotlight
-                    className="-top-40 left-0 md:left-60 md:-top-20"
+                    className="-top-40 z-10 left-0 md:left-60 md:-top-20"
                 />
                 <div className="z-50 px-8">
                     {children}

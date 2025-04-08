@@ -18,7 +18,7 @@ export default function About() {
     const experienceInView = useInView(experienceRef, { once: true });
 
     return (
-        <TracingBeam className="md:px-8 pb-12 md:pb-28">
+        <TracingBeam className="md:px-8 pb-28">
             <div className="md:flex md:py-20 justify-center flex-col items-center gap-4">
                 <div className="ls">
                     <motion.div
