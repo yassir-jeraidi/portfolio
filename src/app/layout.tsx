@@ -39,11 +39,11 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
                 <Spotlight
                     className="-top-40 left-0 md:left-60 md:-top-20"
                 />
-                <Navbar/>
-                <div className="z-50">
+                <div className="z-50 px-8">
                     {children}
                 </div>
                 <Toaster/>
+            <Navbar/>
             </div>
         </ThemeProvider>
         </body>

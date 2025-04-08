@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { FormEvent, useRef, type JSX } from "react";
 import { toast } from "sonner";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 
 export default function Contact(): JSX.Element {
     const nameRef = useRef<HTMLInputElement>(null);

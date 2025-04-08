@@ -3,7 +3,7 @@ import aboutMe from '@/assets/me/about-me.png'
 import Image from "next/image";
 import {TracingBeam} from "@/components/ui/tracing-beam";
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import Timeline from "@/components/timeline";
 import {EDUCATIONS} from "@/data/educations";
 import {EXPERIENCES} from "@/data/experiences";
