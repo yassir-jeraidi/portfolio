@@ -1,14 +1,15 @@
 "use client"
 import React, {JSX} from "react";
-import {motion} from "framer-motion";
+import {motion} from "motion/react";
 import {FlipWords} from "@/components/ui/flip-words";
 import {Button} from "@/components/ui/button";
 import Image from "next/image";
 import me from "@/assets/me/me.jpeg";
 import Link from "next/link";
 import type {Link as LinkType} from "@/types";
-import { SOCIAL_MEDIA_LINKS} from "@/data/social-media-links";
+import {SOCIAL_MEDIA_LINKS} from "@/data/social-media-links";
 import {DownloadIcon} from "lucide-react";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
 
 
 export default function Home(): JSX.Element {
@@ -26,13 +27,14 @@ export default function Home(): JSX.Element {
 
     return (
         <motion.div
-            className="md:flex md:ps-40 min-h-screen justify-center items-center gap-4"
+            className="md:flex min-h-screen justify-center items-center gap-4"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
         >
             <motion.div className="ls" variants={itemVariants}>
-                <div className="p-4 max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0">
+                <div
+                    className="p-4 flex flex-col justify-center items-center max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0">
                     <h1 className="font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-400 to-neutral-600 bg-opacity-50">
                         👋Hi, Welcome There!
                     </h1>
@@ -40,7 +42,7 @@ export default function Home(): JSX.Element {
                         className="text-4xl flex text-wrap font-bold md:text-7xl text-neutral-600 dark:text-neutral-400">
                         <FlipWords words={words}/>
                     </div>
-                    <p className="mt-4 font-normal text-base text-neutral-500">
+                    <p className="mt-4 font-normal text-base text-center text-neutral-500">
                         Full Stack Web Developer with a degree in Computer Science and practical experience in creating
                         responsive web/desktop applications. Skilled in both front-end and back-end development, with a
                         focus on user experience and performance optimization. Seeking a position to leverage my skills
@@ -61,20 +63,29 @@ export default function Home(): JSX.Element {
                         }
 
                     </motion.div>
-                    {/*<Link href='/cv-jy.pdf' download target="_blank">*/}
-                        <Button className='my-4' disabled>
-                            view resume
-                            <span>
-                                <DownloadIcon className="w-5 h-5 mx-2" />
+                    <TooltipProvider>
+                        <Tooltip>
+                            <TooltipTrigger className='cursor-pointer'>
+                            <Button className='my-4' disabled>
+                                view resume
+                                <span>
+                                <DownloadIcon className="w-5 h-5 mx-2"/>
                             </span>
-                        </Button>
-                    {/*</Link>*/}
+                            </Button>
+                        </TooltipTrigger>
+                            <TooltipContent>
+                                <p>
+                                    Will be available soon
+                                </p>
+                            </TooltipContent>
+                        </Tooltip>
+                    </TooltipProvider>
                 </div>
             </motion.div>
 
-            <motion.div className="rs" variants={itemVariants} >
-                <Image alt='me' className='rounded-full hover:scale-105 transition-all' src={me} width={800}/>
-            </motion.div>
+            {/*<motion.div className="rs" variants={itemVariants} >*/}
+            {/*    <Image alt='me' className='rounded-full z-50 hover:scale-105 transition-all' src={me} width={800}/>*/}
+            {/*</motion.div>*/}
         </motion.div>
     );
 }
