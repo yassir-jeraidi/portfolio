@@ -100,6 +100,14 @@ export const backend = (theme: string | undefined): Skill[] => [
     {title: "JWT", icon: <Image src={jwt_icon} alt="JWT" width={50} height={50}/>},
     {title: "Laravel", icon: <Image src={laravel_icon} alt="Laravel" width={50} height={50}/>},
     {title: "Spring", icon: <Image src={spring_icon} alt="Spring" width={50} height={50}/>},
+    {
+        title: "Django",
+        icon: <Image src="https://cdn.simpleicons.org/django" alt="Django" width={50} height={50}/>
+    },
+    {
+        title: "Flask",
+        icon: <Image src="https://cdn.simpleicons.org/flask" alt="Flask" width={50} height={50}/>
+    },
 ];
 
 export const databases: Skill[] = [
