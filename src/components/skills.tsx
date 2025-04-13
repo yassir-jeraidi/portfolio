@@ -49,10 +49,7 @@ export default function Skills() {
                         Design :
                     </h1>
                     <HoverEffect items={design} />
-                    <h1 className="text-2xl px-2 font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
-                        Back end :
-                    </h1>
-                    <HoverEffect items={backend(theme)} />
+                
                     <h1 className="text-2xl px-2 font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-300 to-neutral-500 bg-opacity-50">
                         Charting libraries :
                     </h1>
