@@ -29,6 +29,8 @@ import expressjs_icon_light from "@/assets/skills-icons/Express.js_light.svg";
 import jwt_icon from "@/assets/skills-icons/jwt.svg";
 import laravel_icon from "@/assets/skills-icons/laravel.svg";
 import spring_icon from "@/assets/skills-icons/spring.svg";
+import django_icon from "@/assets/skills-icons/django.svg";
+import fastapi_icon from "@/assets/skills-icons/fastapi.svg";
 
 import mongodb_icon from "@/assets/skills-icons/mongodb.svg";
 import mysql_icon from "@/assets/skills-icons/mysql.svg";
@@ -102,11 +104,11 @@ export const backend = (theme: string | undefined): Skill[] => [
     {title: "Spring", icon: <Image src={spring_icon} alt="Spring" width={50} height={50}/>},
     {
         title: "Django",
-        icon: <Image src="https://cdn.simpleicons.org/django" alt="Django" width={50} height={50}/>
+        icon: <Image src={django_icon} alt="Django" width={50} height={50}/>
     },
     {
-        title: "Flask",
-        icon: <Image src="https://cdn.simpleicons.org/flask" alt="Flask" width={50} height={50}/>
+        title: "Fast API",
+        icon: <Image src={fastapi_icon} alt="Flask" width={50} height={50}/>
     },
 ];
 
