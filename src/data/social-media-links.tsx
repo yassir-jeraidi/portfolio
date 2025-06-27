@@ -5,7 +5,7 @@ export const SOCIAL_MEDIA_LINKS : Link[] = [
     {
         id: 1,
         title: "Github",
-        path: "https://github.com/YassirJr",
+        path: "https://github.com/yassir-jeraidi",
         icon: <GithubIcon size={20}/>,
     },
     {
