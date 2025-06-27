@@ -23,6 +23,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
+            enableColorScheme
             enableSystem
         >
             <div className="relative min-h-screen w-full ">
