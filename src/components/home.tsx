@@ -4,12 +4,10 @@ import {motion} from "motion/react";
 import {FlipWords} from "@/components/ui/flip-words";
 import {Button} from "@/components/ui/button";
 import Image from "next/image";
-import me from "@/assets/me/me.jpeg";
 import Link from "next/link";
 import type {Link as LinkType} from "@/types";
 import {SOCIAL_MEDIA_LINKS} from "@/data/social-media-links";
 import {DownloadIcon} from "lucide-react";
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
 
 
 export default function Home(): JSX.Element {
@@ -63,23 +61,14 @@ export default function Home(): JSX.Element {
                         }
 
                     </motion.div>
-                    <TooltipProvider>
-                        <Tooltip>
-                            <TooltipTrigger className='cursor-pointer'>
-                            <Button className='my-4' disabled>
-                                view resume
-                                <span>
+                    <Link href="./Jeraidi-Yassir.pdf" target="_blank">
+                        <Button className='my-4'>
+                            view resume
+                            <span>
                                 <DownloadIcon className="w-5 h-5 mx-2"/>
-                            </span>
-                            </Button>
-                        </TooltipTrigger>
-                            <TooltipContent>
-                                <p>
-                                    Will be available soon
-                                </p>
-                            </TooltipContent>
-                        </Tooltip>
-                    </TooltipProvider>
+                        </span>
+                        </Button>
+                    </Link>
                 </div>
             </motion.div>
 
