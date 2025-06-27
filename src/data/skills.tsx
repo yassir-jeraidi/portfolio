@@ -113,9 +113,9 @@ export const backend = (theme: string | undefined): Skill[] => [
 ];
 
 export const databases: Skill[] = [
-    {title: "MongoDB", icon: <Image src={mongodb_icon} alt="MongoDB" width={40} height={40}/>},
+    {title: "MongoDB", icon: <Image src={mongodb_icon} alt="MongoDB" width={25} height={25}/>},
     {title: "MySQL", icon: <Image src={mysql_icon} alt="MySQL" width={50} height={50}/>},
-    {title: "SQLite", icon: <Image src={sqlite_icon} alt="SQLite" width={50} height={50}/>},
+    {title: "SQLite", icon: <Image src={sqlite_icon} alt="SQLite" width={100} height={100}/>},
     {title: "Firebase", icon: <Image src={firebase_icon} alt="Firebase" width={50} height={50}/>},
     {title: "Supabase", icon: <Image src={supabase_icon} alt="Supabase" width={50} height={50}/>},
 ];
@@ -139,7 +139,7 @@ export const software = (theme: string | undefined): Skill[] => [
 ];
 
 export const design: Skill[] = [
-    {title: "Figma", icon: <Image src={figma_icon} alt="Figma" width={50} height={50}/>},
+    {title: "Figma", icon: <Image src={figma_icon} alt="Figma" width={40} height={40}/>},
     {title: "Canva", icon: <Image src={canva_icon} alt="Canva" width={50} height={50}/>},
 ];
 
