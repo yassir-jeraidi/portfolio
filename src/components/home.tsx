@@ -61,7 +61,7 @@ export default function Home(): JSX.Element {
                         }
 
                     </motion.div>
-                    <Link href="./Jeraidi-Yassir.pdf" target="_blank">
+                    <Link href="/jeraidi-yassir-cv-v2.pdf" target="_blank">
                         <Button className='my-4'>
                             view resume
                             <span>
